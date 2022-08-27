@@ -1,0 +1,240 @@
+html {
+    font-size: 62, 5%;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "hero hero hero hero"
+        "about about about about"
+        "services services services services"
+        "projects projects projects projects"
+        "footer footer footer footer ";
+
+    grid-template-columns: repeat(4, 1fr);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-width: var(--max-width-size);
+    margin: 0 auto;
+}
+
+.header {
+    grid-area: header;
+    background-color: #ffff;
+}
+
+.header .header-container {
+    display: flex;
+    padding: 2rem 4rem;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 7.5rem;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    transition: 0.5s ease-in-out;
+}
+
+.header a:hover h1 {
+
+    color: coral;
+}
+
+.hero {
+    grid-area: hero;
+    height: 85vh;
+    background: url("../images/lemons.jpg") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.hero::after {
+    content: url(../images/seta_preta.png);
+    position: absolute;
+    height: 35px;
+    bottom: 40px;
+    animation: dowarrow 0.6s infinite alternate ease-in-out;
+}
+
+@keyframes dowarrow {
+
+    0% {
+        -webkit-transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    100% {
+        -webkit-transform: translateY(0.6em);
+        opacity: 0.9;
+    }
+}
+
+.about {
+    grid-area: about;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #ffff;
+}
+
+.about .item {
+    padding: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.about .item h3 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.about .item p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 30px 0;
+}
+
+.about .image {
+    height: 100%;
+    width: 100%;
+}
+
+.about .btn-know-more {
+    font-size: 1.6rem;
+    align-self: start;
+    transition: 0.2s ease-in-out;
+}
+
+.about .btn-know-more:hover {
+    font-weight: 700;
+}
+
+.about .image.right {
+    background: url('../images/bridge.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.about .image.left {
+    background: url('../images/sky.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.services {
+    grid-area: services;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+}
+
+.services .service {
+    padding: 70px 20px;
+    background-color: aqua;
+}
+
+.services .service img {
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+.services .service h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.services .service p {
+    font-size: 2rem;
+    font-weight: 400;
+    max-width: 400px;
+    margin: 20px auto 0;
+    line-height: 25px;
+}
+
+.services .service:nth-child(1) {
+    background-color: lightblue;
+}
+
+.services .service:nth-child(2) {
+    background-color: lightpink;
+}
+
+
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.project img {
+    height: 100%;
+    transition: 0.3s;
+}
+
+.project a:hover {
+    opacity: 0.9;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.footer h4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer nav {
+    margin: 50px 0;
+}
+
+.footer nav ul {
+    display: flex;
+    margin: 0 auto;
+    max-width: 320px;
+    justify-content: center;
+}
+
+.footer nav ul a {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 20px;
+    border-radius: 50px;
+    transition: 0.3 ease-out;
+}
+
+.footer nav ul li a:hover {
+    color: #fff;
+    font-weight: 700;
+}
+
+.footer .social i {
+    font-size: 2rem;
+    transition: 0.3 ease-out;
+}
+
+.footer .social a {
+    margin: 20px;
+}
+
+.social a:hover {
+    color: #fff;
+}
